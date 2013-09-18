@@ -3,7 +3,11 @@
 patterns = [
             "/companies[company]",
             "/company/{company.id}",
-            "/company/{company.name.contains}"
+            "/company/{company.name.startswith}",
+            "/company/{company.name}/:field",
+            "/company/{company.name}/employees[employee.employer]",
+            "/company/{company.name}/employee[employee.employer]/{employee.name}",
+            "/company/{company.name}/employee[employee.employer]/{employee.name}/:field"
             ]
 
 @request.restful()
