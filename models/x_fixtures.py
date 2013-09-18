@@ -4,7 +4,7 @@ if db(db.company).count() == 0:
         name='Python constructor',
         info='This is a great company...'
 )
-company = db(db.company.name == 'Python constructor').select().first()
+company = db(db.company.name == 'PythonConstructor').select().first()
 if company:
     if db(db.employee.employer == company).count() == 0:
         db.employee.insert(
