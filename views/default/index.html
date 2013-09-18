@@ -2,10 +2,13 @@
 <h4>{{=T('Try the api :')}}</h4>
 <ul>
   <li><a href="{{=URL('default', 'api', args=['companies.json'])}}">{{=T('List all companies')}}</a></li>
-  <li><a href="{{=URL('default', 'api', args=['company', '1.json'])}}">{{=T('Search first company')}}</a></li>
-  <li><a href="{{=URL('default', 'api', args=['company', 'ython'])}}">{{=T('Search one company where name contains "ython"')}}</a></li>
-  <li><a href="{{=URL('default', 'api', args=['company', 'PythonConstructor', 'info.json'])}}">{{=T('Get infos about first company')}}</a></li>
-  <li><a href="{{=URL('default', 'api', args=['company', 'PythonConstructor', 'employees.json'])}}">{{=T('List all employees at first company')}}</a></li>
+  <li><a href="{{=URL('default', 'api', args=['company', 'id', '1.json'])}}">{{=T('Search first company')}}</a></li>
+  <li><a href="{{=URL('default', 'api', args=['company', 'name', 'ython.json'])}}">{{=T('Search one company where name contains "ython"')}}</a></li>
+  <li><a href="{{=URL('default', 'api', args=['company', 'id', '1', 'info.json'])}}">{{=T('Get infos about first company')}}</a></li>
+  <li><a href="{{=URL('default', 'api', args=['company', 'id', '1', 'employees.json'])}}">{{=T('List all employees at first company')}}</a></li>
+  <li><a href="{{=URL('default', 'api', args=['company', 'id', '1', 'employee', 'name', 'er.json'])}}">{{=T('Search one employee where name contains ""er""')}}</a></li>
+  <li><a href="{{=URL('default', 'api', args=['company', 'id', '1', 'employee', 'id', '1.json'])}}">{{=T('Get the first employee at first company')}}</a></li>
+  <li><a href="{{=URL('default', 'api', args=['company', 'id', '1', 'employee', 'id', '1', 'info.json'])}}">{{=T('Get infos about the first employee at first company')}}</a></li>
 </ul>
 <h4>{{=T('Or try your own request to %s', URL('default', 'api', 'WhatEver.json'))}}</h4>
 <h5>{{=T('Allowed patterns :')}}</h5>

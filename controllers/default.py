@@ -2,12 +2,13 @@
 
 patterns = [
             "/companies[company]",
-            "/company/{company.id}",
-            "/company/{company.name.startswith}",
-            "/company/{company.name}/:field",
-            "/company/{company.name}/employees[employee.employer]",
-            "/company/{company.name}/employee[employee.employer]/{employee.name}",
-            "/company/{company.name}/employee[employee.employer]/{employee.name}/:field"
+            "/company/id/{company.id}",
+            "/company/name/{company.name.contains}",
+            "/company/id/{company.id}/:field",
+            "/company/id/{company.id}/employees[employee.employer]",
+            "/company/id/{company.id}/employee[employee.employer]/name/{employee.name.contains}",
+            "/company/id/{company.id}/employee[employee.employer]/id/{employee.id}",
+            "/company/id/{company.id}/employee[employee.employer]/id/{employee.id}/:field"
             ]
 
 @request.restful()
